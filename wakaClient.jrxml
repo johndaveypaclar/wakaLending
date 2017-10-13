@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="wakaClient" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="073a1e07-6594-4aea-835a-b006867e3933">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="192"/>
+	<queryString>
+		<![CDATA[SELECT * from tblClient]]>
+	</queryString>
+	<field name="clientID" class="java.lang.Object"/>
+	<field name="clientFname" class="java.lang.Object"/>
+	<field name="clientLname" class="java.lang.Object"/>
+	<field name="clientMname" class="java.lang.Object"/>
+	<field name="clientContactNo" class="java.lang.Object"/>
+	<field name="clientAddress" class="java.lang.Object"/>
+	<field name="employeeID" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<image>
+				<reportElement x="115" y="0" width="350" height="128" uuid="d1fdfc11-9fc8-474d-9e25-1430516494e5"/>
+				<imageExpression><![CDATA["C:\\Users\\Dave Paclar\\Desktop\\OOPexam\\src\\com\\mexam\\loginregister\\gamay.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="47" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="22" width="570" height="1" forecolor="#FFCC33" uuid="15b8b6e9-83ea-47c1-917e-721c767c3448"/>
+				<graphicElement>
+					<pen lineWidth="44.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="86" splitType="Stretch">
+			<staticText>
+				<reportElement x="215" y="0" width="240" height="45" uuid="66b42a24-d370-4a44-bc2f-b83c10b3e393"/>
+				<textElement>
+					<font size="35" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Client List]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="252" y="66" width="64" height="20" uuid="d02d3ff8-3bfa-4387-8774-b3e78d14732e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="66" width="10" height="20" uuid="23f83f81-5574-4425-9dbe-5c45079f6fb3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="66" width="64" height="20" uuid="33003e0f-b817-443e-8efb-f40a94010513"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="24" y="66" width="63" height="20" uuid="8db22877-141e-4e09-9209-7205cabd485a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="97" y="66" width="68" height="20" uuid="6dd07244-9dcb-449d-9bdd-eecf8cad7a26"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Middle Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="66" width="64" height="20" uuid="5bde7159-67bb-44ef-a3eb-62774f2bff50"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="465" y="66" width="107" height="20" uuid="0c1714d9-6ca9-4245-90f6-a5600abff511"/>
+				<textElement>
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Employee Assigned(ID)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="252" y="0" width="62" height="20" uuid="3403fb4c-8373-4e5f-9416-67d821a50649"/>
+				<textFieldExpression><![CDATA[$F{clientContactNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="498" y="0" width="32" height="20" uuid="72b9401a-f653-4e56-8486-454cf6869eb6"/>
+				<textFieldExpression><![CDATA[$F{employeeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="139" height="20" uuid="55f1b08d-4387-4e23-81c6-761e577c7cd2"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{clientAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="4" y="0" width="20" height="20" uuid="3f1634b2-c06d-4c75-af83-5d070fee1016"/>
+				<textFieldExpression><![CDATA[$F{clientID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="0" width="63" height="20" uuid="49a53a95-6a34-4716-ad9b-17bc57de8f80"/>
+				<textFieldExpression><![CDATA[$F{clientFname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="0" width="64" height="20" uuid="2e13c8eb-ace2-46f6-acd2-33bb81504c46"/>
+				<textFieldExpression><![CDATA[$F{clientLname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="0" width="68" height="20" uuid="45b3546a-2048-474f-883a-bccde909a613"/>
+				<textFieldExpression><![CDATA[$F{clientMname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="154" splitType="Stretch">
+			<image>
+				<reportElement x="470" y="45" width="100" height="89" uuid="e9fe1514-0526-4be7-a8e6-8eb336bac628"/>
+				<imageExpression><![CDATA["C:\\Users\\Dave Paclar\\Desktop\\OOPexam\\src\\com\\mexam\\loginregister\\mini.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="450" y="134" width="80" height="20" uuid="aa43a634-4534-44dc-8e72-b38a3f28fc66"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="530" y="134" width="40" height="20" uuid="001bd249-8067-40cc-ab71-3b7e47e2a5d0"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

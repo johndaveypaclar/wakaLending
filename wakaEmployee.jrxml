@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="wakaEmployee" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="49a7f0f0-bf79-4573-8614-b8993c6e0bf4">
+	<property name="ireport.zoom" value="1.1000000000000016"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * From tblEmployee]]>
+	</queryString>
+	<field name="employeeID" class="java.lang.Object"/>
+	<field name="employeeFname" class="java.lang.Object"/>
+	<field name="employeeLname" class="java.lang.Object"/>
+	<field name="employeeMname" class="java.lang.Object"/>
+	<field name="employeeContactNo" class="java.lang.Object"/>
+	<field name="employeeUser" class="java.lang.Object"/>
+	<field name="employeePass" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="128" splitType="Stretch">
+			<image>
+				<reportElement x="102" y="0" width="350" height="128" uuid="86505575-d17b-4fcc-854f-7e079cc28a66"/>
+				<imageExpression><![CDATA["C:\\Users\\Dave Paclar\\Desktop\\OOPexam\\src\\com\\mexam\\loginregister\\gamay.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="23" width="570" height="1" forecolor="#FFCC33" uuid="e0d19c75-0a7e-47cf-9b5a-b14506daf89d"/>
+				<graphicElement>
+					<pen lineWidth="44.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="240" height="45" uuid="83b64b31-8171-47f1-8a0d-a55410a7f15c"/>
+				<textElement>
+					<font size="35" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Employee List]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="29" y="59" width="62" height="20" uuid="339a7f56-d393-4f9d-ac01-2ac73c50810b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="59" width="63" height="20" uuid="1ed5ad1c-b3fb-42e7-a5f2-ddf437b9335d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="59" width="64" height="20" uuid="6beff0ab-6c28-4e5f-964e-8d2357629e18"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="59" width="68" height="20" uuid="011cb9c7-a925-4aca-b7b9-a2ff2656f37f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Middle Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="322" y="59" width="64" height="20" uuid="350d8d03-ddce-4ca5-ada8-e1a6b45ed152"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="59" width="63" height="20" uuid="efd6e8d7-73d3-478e-b616-4dd9e09d8469"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Password]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="398" y="59" width="64" height="20" uuid="09c359a3-00d3-4eb0-80a8-6bfcf178d0e0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Username]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="-231" y="-61" width="123" height="26" uuid="30a9c838-d9d8-405e-ad53-02e02c3013db"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Client Assignment]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="102" y="0" width="63" height="20" uuid="9b2f6d1a-eab4-4748-b217-4f229ae22cb9"/>
+				<textFieldExpression><![CDATA[$F{employeeFname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="68" height="20" uuid="e61d9f95-5ac7-4463-b23f-c825271640a0"/>
+				<textFieldExpression><![CDATA[$F{employeeMname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="248" y="0" width="64" height="20" uuid="fb726203-a74e-4aa4-85e4-d597b88429a7"/>
+				<textFieldExpression><![CDATA[$F{employeeLname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-243" y="-79" width="102" height="20" uuid="55c75052-fc18-40f3-9da8-b3e2a2f06291"/>
+				<textFieldExpression><![CDATA[$F{employeeLname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-243" y="-79" width="102" height="20" uuid="3490923e-d87d-4018-9fe9-92c6d2b02eaf"/>
+				<textFieldExpression><![CDATA[$F{employeeLname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-243" y="-79" width="102" height="20" uuid="f1187221-c413-4353-9ef6-ac747855a7bb"/>
+				<textFieldExpression><![CDATA[$F{employeeLname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="29" y="0" width="62" height="20" uuid="02ccaeca-e409-4f28-b868-b2c7e619cb57"/>
+				<textFieldExpression><![CDATA[$F{employeeID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="324" y="0" width="62" height="20" uuid="93acdf8e-bbc8-4086-9689-973aa37fd49b"/>
+				<textFieldExpression><![CDATA[$F{employeeContactNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="0" width="64" height="20" uuid="6e763d50-80b6-4b6c-8123-7dfa49bc6f2f"/>
+				<textFieldExpression><![CDATA[$F{employeeUser}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="472" y="0" width="65" height="20" uuid="d4025e98-639c-488a-a24e-a726e722d968"/>
+				<textFieldExpression><![CDATA[$F{employeePass}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="192" splitType="Stretch">
+			<textField>
+				<reportElement x="452" y="172" width="80" height="20" uuid="27604f94-4736-4657-95a5-b805bf72045e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="532" y="172" width="40" height="20" uuid="9c2d5f05-12ab-4da8-809e-8e759711d06a"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="472" y="83" width="100" height="89" uuid="3fa794ed-5f75-4c69-8aca-2c5bc67e9d99"/>
+				<imageExpression><![CDATA["C:\\Users\\Dave Paclar\\Desktop\\OOPexam\\src\\com\\mexam\\loginregister\\mini.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="-231" y="-61" width="123" height="26" uuid="2abf2ce5-e462-44ea-88c6-826d60b5b2a9"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Client Assignment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-231" y="-61" width="123" height="26" uuid="20ef6c54-1111-408a-a652-7dcda335e176"/>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Client Assignment]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

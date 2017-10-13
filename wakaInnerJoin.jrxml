@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="wakaInnerJoin" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8aa45498-4f57-4c56-bb49-ff0c052b665e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * from tblClient as a
+INNER JOIN tblEmployee as b
+on a.employeeID = b.employeeID]]>
+	</queryString>
+	<field name="clientID" class="java.lang.Object"/>
+	<field name="clientFname" class="java.lang.Object"/>
+	<field name="clientLname" class="java.lang.Object"/>
+	<field name="clientMname" class="java.lang.Object"/>
+	<field name="clientContactNo" class="java.lang.Object"/>
+	<field name="clientAddress" class="java.lang.Object"/>
+	<field name="employeeID" class="java.lang.Object"/>
+	<field name="employeeFname" class="java.lang.Object"/>
+	<field name="employeeLname" class="java.lang.Object"/>
+	<field name="employeeMname" class="java.lang.Object"/>
+	<field name="employeeContactNo" class="java.lang.Object"/>
+	<field name="employeeUser" class="java.lang.Object"/>
+	<field name="employeePass" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="135" splitType="Stretch">
+			<image>
+				<reportElement x="102" y="0" width="350" height="128" uuid="cef13022-f25c-4338-9615-c69baf142796"/>
+				<imageExpression><![CDATA["C:\\Users\\Dave Paclar\\Desktop\\OOPexam\\src\\com\\mexam\\loginregister\\gamay.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="29" width="570" height="1" forecolor="#FFCC33" uuid="d7c0ee00-7141-4cff-8b1f-af877067fecd"/>
+				<graphicElement>
+					<pen lineWidth="44.0" lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="218" y="18" width="134" height="26" uuid="c9205645-0fdc-4c62-82a8-8cc62cde7a4d"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Client Assignment]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="31" y="0" width="106" height="52" uuid="8848c374-4acc-46a2-8c95-9ba329ee95b6"/>
+				<textElement>
+					<font size="40" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Client]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="7" width="160" height="45" uuid="96dc18ae-05dd-4adf-bdf2-4fd4aaa05ef1"/>
+				<textElement>
+					<font size="35" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Employee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="18" width="132" height="34" uuid="10ad48a9-45df-4348-b914-d7977a4fcdb2"/>
+				<textElement>
+					<font fontName="Adobe Caslon Pro" size="25"/>
+				</textElement>
+				<text><![CDATA[Assigned to:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="495" y="0" width="77" height="20" uuid="fb698ab3-f53b-4aa1-a582-f28b0eab4a84"/>
+				<textFieldExpression><![CDATA[$F{employeeLname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="0" width="82" height="20" uuid="5aad9872-cfc4-46f6-99ea-80367416c99e"/>
+				<textFieldExpression><![CDATA[$F{clientMname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="0" width="80" height="20" uuid="fb365187-8c57-4035-bc8d-409091069f6f"/>
+				<textFieldExpression><![CDATA[$F{clientFname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="164" y="0" width="78" height="20" uuid="eb5ce888-289b-4291-b5f8-53050dcd6824"/>
+				<textFieldExpression><![CDATA[$F{clientLname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="252" y="0" width="49" height="20" forecolor="#FFCC00" uuid="81fdb9dc-8676-4a90-b9d3-f9b934b0e5e3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[------->]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="413" y="0" width="82" height="20" uuid="23c3d424-566f-4610-b71d-3f808ebf24df"/>
+				<textFieldExpression><![CDATA[$F{employeeMname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="332" y="0" width="81" height="20" uuid="f5e02645-4add-4584-8e21-b1d5d94eb79d"/>
+				<textFieldExpression><![CDATA[$F{employeeFname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="13" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="198" splitType="Stretch">
+			<image>
+				<reportElement x="472" y="89" width="100" height="89" uuid="01e0211a-a268-44b3-9257-e59c35ade291"/>
+				<imageExpression><![CDATA["C:\\Users\\Dave Paclar\\Desktop\\OOPexam\\src\\com\\mexam\\loginregister\\mini.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="452" y="178" width="80" height="20" uuid="699d1227-a863-4705-9db5-0b8d284c7273"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="532" y="178" width="40" height="20" uuid="a437122d-e1ae-408d-a205-536e952b62dc"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="17" splitType="Stretch"/>
+	</summary>
+</jasperReport>
